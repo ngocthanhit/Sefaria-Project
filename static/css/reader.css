@@ -438,7 +438,9 @@ body.bilingual #about.enLocked.heLocked #editText {
 	background: inherit;
 	font-family: serif;
 	padding-bottom: 200px;
-
+	/* THANH added */
+    max-height: 800px !important;
+    overflow-y: auto !important;
 }
 
 body .basetext.noCommentary {
