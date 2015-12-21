@@ -428,7 +428,7 @@ body.bilingual #about.enLocked.heLocked #editText {
 .basetext {
 	position: absolute;
 	width: 56.5%;
-	top: 110px;
+	top: 80px;
 	left: 5.5%;
 	font-size: 24px;
 	text-align: justify;
@@ -438,8 +438,9 @@ body.bilingual #about.enLocked.heLocked #editText {
 	background: inherit;
 	font-family: serif;
 	padding-bottom: 200px;
+	padding-right: 20px;
+	max-height: 700px;
 	/* THANH added */
-    max-height: 800px !important;
     overflow-y: auto !important;
 }
 
