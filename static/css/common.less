@@ -1,42 +1,18 @@
+@import "fonts";
+
 /* CSS common to Reader, Sheets and all static pages */
 
 /* Improves touch reactiveness on iOS devices */
 .categoryFilter {
-    -webkit-tap-hightlight-color: rgba(0,0,0,0);
-}
-
-@font-face {
-  font-family: 'Rashi Script';
-  src: url('/static/fonts/Mekorot-Rashi.ttf');
-}
-
-@font-face {
-  font-family: 'Taamey Frank';
-  src: url('/static/fonts/Taamey-Frank/TaameyFrankCLM-Medium.ttf');
-}
-@font-face {
-  font-family: 'Taamey Frank';
-  src: url('/static/fonts/Taamey-Frank/TaameyFrankCLM-Bold.ttf');
-  font-weight: bold;
-}
-@font-face {
-  font-family: 'Taamey Frank';
-  src: url('/static/fonts/Taamey-Frank/TaameyFrankCLM-MediumOblique.ttf');
-  font-style: italic;
-}
-@font-face {
-  font-family: 'Taamey Frank';
-  src: url('/static/fonts/Taamey-Frank/TaameyFrankCLM-BoldOblique.ttf');
-  font-style: italic;
-  font-weight: bold;
+  -webkit-tap-hightlight-color: rgba(0,0,0,0);
 }
 
 /* Avoid Flash of Unstyled Text with Google Web Font Loader */
 .wf-loading {
-    visibility: hidden;
+  visibility: hidden;
 }
 .wf-active {
-    visibility: visible;
+  visibility: visible;
 }
 
 .modal {
@@ -77,11 +53,11 @@
   padding: 0;
   background-color: white;
   border-bottom: 1px solid #ddd;
-  vertical-align: middle
-  -moz-user-select: none; 
-  -khtml-user-select: none; 
-  -webkit-user-select: none; 
-  -o-user-select: none; 
+  vertical-align: middle;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
 }
 
 body.embeded #top {
@@ -95,11 +71,11 @@ body.embeded #top {
 }
 
 #sefaria {
-    cursor: pointer;
-    padding: 3px 3px;
-    display: inline-block;
-    height: 100%;
-    line-height: 40px;
+  cursor: pointer;
+  padding: 3px 3px;
+  display: inline-block;
+  height: 100%;
+  line-height: 40px;
 }
 
 #sefaria svg {
@@ -112,7 +88,7 @@ body.embeded #top {
 
 #sefaria {
   font-size: 20px;
-	vertical-align: top;
+  vertical-align: top;
   padding-left: 2px;
 }
 
@@ -195,7 +171,7 @@ body.embeded #top {
   float: right;
   font-size: 16px;
   margin: 0 10px 0 0;
-  padding: 2px 0; 
+  padding: 2px 0;
   color: inherit;
 }
 
@@ -222,7 +198,7 @@ body.embeded #top {
   max-width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
-  background-color: transparent;  
+  background-color: transparent;
 }
 
 #navPanelCalendar td {
@@ -265,8 +241,8 @@ body.embeded #top {
 }
 
 #tocTopMatter {
-    display: block;
-    width: 92%;
+  display: block;
+  width: 92%;
 }
 
 #navToc #tocCatHeaders {
@@ -284,23 +260,23 @@ body.embeded #top {
 }
 
 #navToc .sectionName {
-    text-align: center;
-    font-style: italic;
-    font-size: 13px;
-    margin-bottom: 4px;
+  text-align: center;
+  font-style: italic;
+  font-size: 13px;
+  margin-bottom: 4px;
 }
 
 #navToc .inline-default-node .sectionName {
-    text-align: start;
-    padding: 8px 40px 3px;
-    margin: 0px;
+  text-align: start;
+  padding: 8px 40px 3px;
+  margin: 0px;
 }
 
 #navToc .tocCat {
   line-height: 18px;
 }
 
-#navToc .previewLink { 
+#navToc .previewLink {
   height: 26px;
 }
 
@@ -332,12 +308,12 @@ body.embeded #top {
 }
 
 #navTocLangToggleBox {
-    float: right;
+  float: right;
 }
 
 #navPanel .tocCat.backLink {
-    float: left;
-    padding: 4px 0 0 40px;
+  float: left;
+  padding: 4px 0 0 40px;
 }
 
 #navTocPreviewToggle {
@@ -383,7 +359,7 @@ body.embeded #top {
   position: relative;
 }
 
-#navToc .he { 
+#navToc .he {
   font-size: 140%;
   font-family: "Times New Roman", serif;
   direction: rtl;
@@ -423,34 +399,34 @@ body.embeded #top {
 }
 
 #navToc #structureDropdown {
-    color: #999;
-    font-style: italic;
-    font-size: 10px;
-    display: block;
-    float: right;
-    padding: 6px 14px 0 0;
+  color: #999;
+  font-style: italic;
+  font-size: 10px;
+  display: block;
+  float: right;
+  padding: 6px 14px 0 0;
 }
 
 #navToc #structureDropdown select {
-    font-size: 10px;
-    height: 18px;
-    line-height: 18px;
-    margin: 0;
-    width: 110px;
-    padding: 0;
+  font-size: 10px;
+  height: 18px;
+  line-height: 18px;
+  margin: 0;
+  width: 110px;
+  padding: 0;
 }
 
 .sparse1 {
-    color: #bbb;
+  color: #bbb;
 }
 .sparse2 {
-    color: #999;
+  color: #999;
 }
 .sparse3 {
-    color: #777;
+  color: #777;
 }
 .sparse4 {
-    color: #000;
+  color: #000;
 }
 
 #navPanelTextsMore {
@@ -529,17 +505,17 @@ body.embeded #top {
 }
 
 #alertMessage {
-position:fixed;
-width:100%;
-display:none;
-z-index:101;
-text-align:center;
-background-color: #f2dede;
-border-color: #eed3d7;
-color: #b94a48;
-border: 1px solid #fbeed5;
-margin-bottom: 18px;
-text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  position:fixed;
+  width:100%;
+  display:none;
+  z-index:101;
+  text-align:center;
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #b94a48;
+  border: 1px solid #fbeed5;
+  margin-bottom: 18px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 
 }
 
@@ -717,7 +693,7 @@ text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 
 #peopleListModal {
-  max-width: 90%; 
+  max-width: 90%;
 }
 
 #peopleListTitle {
@@ -835,8 +811,8 @@ body.hebrew #visualGardenPage .filter-title .reset {
 }
 
 #visualGardenPage #map-chart {
-    margin-left: 10px;
-    margin-bottom: 25px;
+  margin-left: 10px;
+  margin-bottom: 25px;
 }
 
 #visualGardenPage #map-chart path {
@@ -906,8 +882,8 @@ body.hebrew #visualGardenPage .filter-title .reset {
   background: #ccc;
 }
 
-#languageToggle, 
-#layoutToggle, 
+#languageToggle,
+#layoutToggle,
 #biLayoutToggle,
 #sheetLayoutToggle {
   display: none;
@@ -925,7 +901,7 @@ body.hebrew #visualGardenPage .filter-title .reset {
 
   /* Put search results on new line */
   #searchContent {
-      clear: both;
+    clear: both;
   }
 
   /* Get rid of whitespace on search page */
@@ -1049,7 +1025,7 @@ body.hebrew #visualGardenPage .filter-title .reset {
 }
 
 .enAll.heAll {
-  color: #08c;  
+  color: #08c;
 }
 
 /****   Person    ****/
@@ -1078,14 +1054,14 @@ body.hebrew #visualGardenPage .filter-title .reset {
 }
 
 div.person_tooltip {
-    position: absolute;
-    text-align: center;
-    padding: 6px;
-    font: 12px sans-serif;
-    background: lightsteelblue;
-    border: 0px;
-    border-radius: 8px;
-    pointer-events: none;
+  position: absolute;
+  text-align: center;
+  padding: 6px;
+  font: 12px sans-serif;
+  background: lightsteelblue;
+  border: 0px;
+  border-radius: 8px;
+  pointer-events: none;
 }
 
 #personPage #relationships a,
@@ -1235,38 +1211,38 @@ div.person_tooltip {
 }
 
 #lowerSearchBox {
-    position: relative;
-    padding-top: 35px;
-    width:70%
+  position: relative;
+  padding-top: 35px;
+  width:70%
 }
 
 #lowerSearchBoxWrapper {
-    padding-bottom: 15px;
+  padding-bottom: 15px;
 }
 
 #lowerSearch {
-    width: 100%;
-    font-size: 20px;
-    padding: 8px 10px;
-    height: 24px;
+  width: 100%;
+  font-size: 20px;
+  padding: 8px 10px;
+  height: 24px;
 }
 
 #lowerSearchBox .searchButton,
 #lowerSearchBox .keyboardInputInitiator {
-    top: 45px;
+  top: 45px;
 }
 
 .english #lowerSearchBox .searchButton {
-    right: -5px;
+  right: -5px;
 }
 
 .hebrew #lowerSearchBox .searchButton {
-    right: auto;
-    left: -5px;
+  right: auto;
+  left: -5px;
 }
 .hebrew #lowerSearchBox .keyboardInputInitiator {
-    right: auto;
-    left: 15px;
+  right: auto;
+  left: 15px;
 }
 
 
@@ -1284,7 +1260,7 @@ div.person_tooltip {
 }
 
 .searchBox .keyboardInputInitiator:hover {
- background: #d8d8d8;
+  background: #d8d8d8;
 }
 
 body #keyboardInputMaster {
@@ -1293,7 +1269,7 @@ body #keyboardInputMaster {
 }
 
 body.searchPage #keyboardInputMaster {
-    top: 115px !important;
+  top: 115px !important;
 }
 
 body #keyboardInputMaster thead tr th div {
@@ -1376,10 +1352,10 @@ body.hebrew #talmudicPeoplePage #textTocLink {
   margin-right: 12px;
   font-family: Georgia, serif;
   font-size: 14px;
-} 
+}
 
 #topLeftLinks #shareLink {
-  display: none; 
+  display: none;
   cursor: pointer;
 }
 
@@ -1460,28 +1436,28 @@ body.hebrew #talmudicPeoplePage #textTocLink {
 }
 
 .hebrew #search-instructions .en {
-    display: none;
+  display: none;
 }
 
 .english #search-instructions .he {
-    display: none;
+  display: none;
 }
 
 #searchControlsBox {
-    min-height: 3px;
+  min-height: 3px;
 }
 
 .hebrew #searchControlsBox,
 .hebrew #searchContent {
-    float: right;
+  float: right;
 }
 
 .hebrew #lowerSearchBox {
-    float: right;
+  float: right;
 }
 .hebrew #description {
-    float: right;
-    clear: both;
+  float: right;
+  clear: both;
 }
 
 #searchContent {
@@ -1489,14 +1465,14 @@ body.hebrew #talmudicPeoplePage #textTocLink {
 }
 
 #searchHeader {
-    padding-top: 35px;
-    font-size: 20px;
-    min-height: 50px;
+  padding-top: 35px;
+  font-size: 20px;
+  min-height: 50px;
 }
 
 .hebrew #searchHeader,
 .hebrew #searchHeaderContainer {
-    float: right;
+  float: right;
 }
 
 
@@ -1508,14 +1484,14 @@ body.hebrew #talmudicPeoplePage #textTocLink {
 
 
 #searchFilters {
-    display: none;
-    padding-bottom: 10px;
+  display: none;
+  padding-bottom: 10px;
 }
 
 /* the checkbox itself */
 #searchFilters .filter {
-    margin-left: 3px;
-    margin-right: 3px;
+  margin-left: 3px;
+  margin-right: 3px;
 }
 
 
@@ -1527,35 +1503,35 @@ body.hebrew #talmudicPeoplePage #textTocLink {
 
 
 #tree-controls {
-    margin: 10px 10px 0;
-    font-size: 10px;
+  margin: 10px 10px 0;
+  font-size: 10px;
 }
 
 #tree-controls span {
-    cursor: pointer;
-    text-decoration: underline;
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 
 #searchFilters li {
-    list-style-type: none;
-    font-size: 15px;
-    line-height: 26px;
+  list-style-type: none;
+  font-size: 15px;
+  line-height: 26px;
 }
 
 .hebrew #searchFilters ul {
-    margin: 0 16px 0 0;
+  margin: 0 16px 0 0;
 }
 .english #searchFilters ul {
-    margin: 0 0 0 16px;
+  margin: 0 0 0 16px;
 }
 
 #searchResults {
-    padding-bottom: 80px;
+  padding-bottom: 80px;
 }
 
 .hebrew #searchResults {
-    direction: rtl;
+  direction: rtl;
 }
 
 #searchResults .result {
@@ -1565,11 +1541,11 @@ body.hebrew #talmudicPeoplePage #textTocLink {
 
 .hebrew #searchResults .result .en,
 .hebrew .similar-box .en {
-    display: none;
+  display: none;
 }
 .english #searchResults .result .he,
 .english .similar-box .he {
-    display: none;
+  display: none;
 }
 
 #searchResults .result a {
@@ -1577,36 +1553,36 @@ body.hebrew #talmudicPeoplePage #textTocLink {
 }
 
 #searchResults .result .version {
-    font-size: 12px;
-    color: #777;
-    margin-top: 3px;
-    display: inline-block;
-    direction: ltr;
+  font-size: 12px;
+  color: #777;
+  margin-top: 3px;
+  display: inline-block;
+  direction: ltr;
 }
 
 #searchResults .similar-trigger-box {
-    display: inline-block;
-    margin-left: 5px;
-    margin-right: 5px;
+  display: inline-block;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 #searchResults .similar-box {
-    padding: 0 40px 0 40px;
-    margin-bottom: 10px;
+  padding: 0 40px 0 40px;
+  margin-bottom: 10px;
 }
 #searchResults .similar-title {
-    font-size: 10px;
-    text-decoration: underline;
-    cursor: pointer;
+  font-size: 10px;
+  text-decoration: underline;
+  cursor: pointer;
 }
 #searchResults .similar-results {
-    margin-top: -12px;
-    display: none;
+  margin-top: -12px;
+  display: none;
 }
 
 .hebrew .moreResults .en,
 .english .moreResults .he {
-    display: none;
+  display: none;
 }
 #searchResults .moreResults {
   color: #08c;
@@ -1630,14 +1606,14 @@ body.hebrew #talmudicPeoplePage #textTocLink {
   top: 0px;
   width: 50%;
   text-align: right;
-  right: 100%; 
+  right: 100%;
   font-size: 18px;
   padding: 0px;
   letter-spacing: .7px;
   line-height: 1.3;
   font-family: Georgia, serif;
   overflow: hidden;
-  z-index: 10;  
+  z-index: 10;
 }
 
 .hebrew.textSyncNumbers {
@@ -1645,7 +1621,7 @@ body.hebrew #talmudicPeoplePage #textTocLink {
   right: auto;
 }
 
-.textSyncNumbers .segmentLabel {  
+.textSyncNumbers .segmentLabel {
   font-size: 16px;
   direction: rtl;
   line-height: 1.7;
@@ -1671,28 +1647,28 @@ body.hebrew #talmudicPeoplePage #textTocLink {
 }
 
 #loginPrompt {
-	padding: 30px 20px 10px;
-	width: 400px;
+  padding: 30px 20px 10px;
+  width: 400px;
   text-align: center;
 }
 
 #loginPrompt h3 {
-	margin: 0 0 25px 0;
+  margin: 0 0 25px 0;
 }
 
 #loginPrompt .btn {
-	margin: 0 20px;
-	font-size: 19px;
-	width: 70px;
+  margin: 0 20px;
+  font-size: 19px;
+  width: 70px;
 }
 
 #loginPrompt .cancel {
-	margin-top: 25px;
-	cursor: pointer;
+  margin-top: 25px;
+  cursor: pointer;
 }
 
 #loginPrompt .cancel:hover {
-	text-decoration: underline;
+  text-decoration: underline;
 }
 
 .alertBox {
@@ -1708,7 +1684,7 @@ body.hebrew #talmudicPeoplePage #textTocLink {
 }
 
 .alertBox .msg {
-  padding: 40px; 
+  padding: 40px;
   font-size: 26px;
   line-height: 1.2;
 }
@@ -1894,19 +1870,19 @@ body.hebrew #talmudicPeoplePage #textTocLink {
 
   /* Force table to not be like tables anymore */
   .sheetTable, .sheetTable thead, .sheetTable tbody,
-  .sheetTable th, .sheetTable td, .sheetTable tr { 
-    display: block; 
+  .sheetTable th, .sheetTable td, .sheetTable tr {
+    display: block;
   }
-  
+
   /* Hide table headers (but not display: none;, for accessibility) */
-  .sheetTable thead tr { 
+  .sheetTable thead tr {
     position: absolute;
     top: -9999px;
     left: -9999px;
   }
-  
-  .sheetTable .sheetRow td.title { 
-    width: 100%; 
+
+  .sheetTable .sheetRow td.title {
+    width: 100%;
     box-sizing: border-box;
   }
   .sheetTable td:nth-of-type(2) { padding: 0px 5px 5px; }
@@ -1920,10 +1896,10 @@ body.hebrew #talmudicPeoplePage #textTocLink {
   background: white;
   box-shadow: 1px 1px 3px #555;
   font-family: "Georgia", serif;
-  -moz-user-select: none; 
-  -khtml-user-select: none; 
-  -webkit-user-select: none; 
-  -o-user-select: none; 
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
 
 }
 
@@ -1943,7 +1919,7 @@ body.hebrew #talmudicPeoplePage #textTocLink {
   font-weight: bold;
 }
 
-#textBrowser.absolute #browserPath { 
+#textBrowser.absolute #browserPath {
   width: 550px;
 }
 
@@ -2011,7 +1987,7 @@ body.hebrew #talmudicPeoplePage #textTocLink {
 }
 
 #browserPreview .segment:hover {
-    background-color: #EDF4FA;
+  background-color: #EDF4FA;
 }
 
 #browserPreview .segment.selected {
@@ -2057,10 +2033,10 @@ body.hebrew #talmudicPeoplePage #textTocLink {
   padding: 8px;
   clear: both;
   border-top: 1px solid #ddd;
-  -moz-user-select: none; 
-  -khtml-user-select: none; 
-  -webkit-user-select: none; 
-  -o-user-select: none; 
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
 }
 
 #browserMessage {
@@ -2076,74 +2052,74 @@ body.hebrew #talmudicPeoplePage #textTocLink {
 }
 
 ul.tagit {
-    padding: 1px 5px;
-    overflow: auto;
-    margin-left: inherit; /* usually we don't want the regular ul margins. */
-    margin-right: inherit;
+  padding: 1px 5px;
+  overflow: auto;
+  margin-left: inherit; /* usually we don't want the regular ul margins. */
+  margin-right: inherit;
 }
 ul.tagit li {
-    display: block;
-    float: left;
-    margin: 2px 5px 2px 0;
+  display: block;
+  float: left;
+  margin: 2px 5px 2px 0;
 }
-ul.tagit li.tagit-choice {    
-    position: relative;
-    line-height: inherit;
-    color: #08c;
+ul.tagit li.tagit-choice {
+  position: relative;
+  line-height: inherit;
+  color: #08c;
 }
 
-ul.tagit li.tagit-choice-read-only { 
-    padding: .2em .5em .2em .5em; 
-} 
+ul.tagit li.tagit-choice-read-only {
+  padding: .2em .5em .2em .5em;
+}
 
-ul.tagit li.tagit-choice-editable { 
-    padding: .2em 18px .2em .5em; 
-} 
+ul.tagit li.tagit-choice-editable {
+  padding: .2em 18px .2em .5em;
+}
 
 ul.tagit li.tagit-new {
-    padding: .25em 4px .25em 0;
+  padding: .25em 4px .25em 0;
 }
 
 ul.tagit li.tagit-choice a.tagit-label {
-    cursor: pointer;
-    text-decoration: none;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 ul.tagit li.tagit-choice .tagit-close {
-    cursor: pointer;
-    position: absolute;
-    right: .1em;
-    top: 50%;
-    margin-top: -8px;
-    line-height: 17px;
+  cursor: pointer;
+  position: absolute;
+  right: .1em;
+  top: 50%;
+  margin-top: -8px;
+  line-height: 17px;
 }
 
 /* used for some custom themes that don't need image icons */
 ul.tagit li.tagit-choice .tagit-close .text-icon {
-    display: none;
+  display: none;
 }
 
 ul.tagit li.tagit-choice input {
-    display: block;
-    float: left;
-    margin: 2px 5px 2px 0;
+  display: block;
+  float: left;
+  margin: 2px 5px 2px 0;
 }
 
 ul.tagit input[type="text"] {
-    -moz-box-sizing:    border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing:         border-box;
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
 
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
 
-    border: none;
-    margin: 0;
-    padding: 0;
-    width: inherit;
-    background-color: inherit;
-    outline: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: inherit;
+  background-color: inherit;
+  outline: none;
 }
 
 #textVersions .textVersion {
@@ -2168,8 +2144,8 @@ ul.tagit input[type="text"] {
 }
 
 a {
-	color: #08C;
-	text-decoration: none;
+  color: #08C;
+  text-decoration: none;
 }
 a:hover {
   color: #005580;
@@ -2187,117 +2163,117 @@ a:active {
 
 /* .btn class from twitter bootstrap */
 .btn {
-display: inline-block;
-*display: inline;
-/* IE7 inline-block hack */
+  display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
 
-*zoom: 1;
-padding: 4px 10px 4px;
-margin-bottom: 0;
-font-size: 14px;
-line-height: 18px;
-color: #333333;
-text-align: center;
-text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
-vertical-align: middle;
-background-color: #f5f5f5;
-background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
-background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6);
-background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
-background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
-background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
-background-image: linear-gradient(top, #ffffff, #e6e6e6);
-background-repeat: repeat-x;
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);
-border-color: #e6e6e6 #e6e6e6 #bfbfbf;
-border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-filter: progid:dximagetransform.microsoft.gradient(enabled=false);
-border: 1px solid #cccccc;
-border-bottom-color: #b3b3b3;
--webkit-border-radius: 4px;
--moz-border-radius: 4px;
-border-radius: 4px;
--webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
--moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
-cursor: pointer;
-*margin-left: .3em;
-margin: 0 1px;
+  *zoom: 1;
+  padding: 4px 10px 4px;
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 18px;
+  color: #333333;
+  text-align: center;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  vertical-align: middle;
+  background-color: #f5f5f5;
+  background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: linear-gradient(top, #ffffff, #e6e6e6);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);
+  border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+  border: 1px solid #cccccc;
+  border-bottom-color: #b3b3b3;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  *margin-left: .3em;
+  margin: 0 1px;
 }
 .btn:hover,
 .btn:active,
 .btn.active,
 .btn.disabled,
 .btn[disabled] {
-background-color: #e6e6e6;
+  background-color: #e6e6e6;
 }
 .btn:active,
 .btn.active {
-background-color: #cccccc \9;
+  background-color: #cccccc \9;
 }
 .btn:first-child {
-*margin-left: 0;
+  *margin-left: 0;
 }
 .btn:hover {
-color: #333333;
-text-decoration: none;
-background-color: #e6e6e6;
-background-position: 0 -15px;
--webkit-transition: background-position 0.1s linear;
--moz-transition: background-position 0.1s linear;
--ms-transition: background-position 0.1s linear;
--o-transition: background-position 0.1s linear;
-transition: background-position 0.1s linear;
+  color: #333333;
+  text-decoration: none;
+  background-color: #e6e6e6;
+  background-position: 0 -15px;
+  -webkit-transition: background-position 0.1s linear;
+  -moz-transition: background-position 0.1s linear;
+  -ms-transition: background-position 0.1s linear;
+  -o-transition: background-position 0.1s linear;
+  transition: background-position 0.1s linear;
 }
 .btn:focus {
-outline: thin dotted #333;
-outline: 5px auto -webkit-focus-ring-color;
-outline-offset: -2px;
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
 }
 .btn.active,
 .btn:active {
-background-image: none;
--webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
--moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
-background-color: #e6e6e6;
-background-color: #d9d9d9 \9;
-outline: 0;
+  background-image: none;
+  -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  background-color: #e6e6e6;
+  background-color: #d9d9d9 \9;
+  outline: 0;
 }
 .btn.disabled,
 .btn[disabled] {
-cursor: default;
-background-image: none;
-background-color: #e6e6e6;
-opacity: 0.65;
-filter: alpha(opacity=65);
--webkit-box-shadow: none;
--moz-box-shadow: none;
-box-shadow: none;
+  cursor: default;
+  background-image: none;
+  background-color: #e6e6e6;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
 }
 .btn-large {
-padding: 9px 14px;
-font-size: 15px;
-line-height: normal;
--webkit-border-radius: 5px;
--moz-border-radius: 5px;
-border-radius: 5px;
+  padding: 9px 14px;
+  font-size: 15px;
+  line-height: normal;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
 }
 .btn-large [class^="icon-"] {
-margin-top: 1px;
+  margin-top: 1px;
 }
 .btn-small {
-padding: 5px 9px;
-font-size: 11px;
-line-height: 16px;
+  padding: 5px 9px;
+  font-size: 11px;
+  line-height: 16px;
 }
 .btn-small [class^="icon-"] {
-margin-top: -1px;
+  margin-top: -1px;
 }
 .btn-mini {
-padding: 2px 6px;
-font-size: 11px;
-line-height: 14px;
+  padding: 2px 6px;
+  font-size: 11px;
+  line-height: 14px;
 }
 .btn-primary,
 .btn-primary:hover,
@@ -2495,7 +2471,7 @@ line-height: 14px;
 .btn.lightblue {
   background-color: #4CC2DD;
   color: white;
-  border: 1px solid: #4CC2DD;
+  border: 1px solid #4CC2DD;
 }
 .btn.lightblue:hover {
   background-color: white;
