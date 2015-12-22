@@ -856,7 +856,7 @@ $(function() {
 			var verseControls = '<div class="verseControls btn" ' +
 				'style="left:'+ left +'px;top:'+top+'px">+' +
 				'<div class="verseControlsList">' +
-					'<span class="addNote"><i class="fa fa-comment-o"></i> Add a Question</span>' + 
+					'<span class="addNote"><i class="fa fa-comment-o"></i> Ask a Question</span>' + 
 					'<span class="addSource"><i class="fa fa-link"></i> Add a Cross-Reference</span>' + 
 					'<span class="copyToClipboard"><i class="fa fa-clipboard"></i> Copy to Clipboard</span>' + 
 					'<span class="shareText"><i class="fa fa-share-alt"></i> Share Text</span>' +
