@@ -1054,7 +1054,10 @@ $(function() {
 
 	});
 
+	$("#siderQA").click(function() {
+		addNoteToSelected();
 
+	});
 	// --------------- Add Source / Note through Select Modal ------------------------
 
 	sjs.selectVerse = function(){
