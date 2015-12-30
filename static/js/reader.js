@@ -4227,3 +4227,46 @@ function hardRefresh(ref) {
 	actuallyGet(parseRef(ref));	
 }
 
+function addNode(type, e) {
+	e.stopPropagation();
+	e.preventDefault();
+
+	var $menu = $('.verseControls');
+	if ($menu.is(':visible')) {
+		var selector;
+		var source;
+		switch (type) {
+			case 'question':
+				selector = '.addNote';
+				source = 'Question';
+				break;
+			case 'ref':
+				selector = '.addSource';
+				break;
+		}
+		if (selector) {
+			$menu.find(selector).click();
+
+			if (source) {
+				setTimeout(function() {
+					$('.openVerseTitle > span').attr('class', '').text(source);
+				}, 200);
+			}
+		}
+	}
+	else {
+		alert('Please select at least sentence');
+	}
+}
+
+$(document).on('click', '[data-action]', function(e) {
+	var action = $(this).attr('data-action');
+	switch (action) {
+		case 'add-question':
+			addNode('question', e);
+			break;
+		case 'add-ref':
+			addNode('ref', e);
+			break;
+	}
+});

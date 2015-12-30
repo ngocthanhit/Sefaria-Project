@@ -35,8 +35,6 @@ body {
 .sidePanel {
   z-index: 99;
   -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 #about {
@@ -53,7 +51,8 @@ body {
   margin-top: 10px;
   vertical-align: middle;
   border: 1px solid #ccc;
-  border-radius: 3px;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
   padding: 10px 0px 10px 0px;
   background-color: #f8f8f8;
 }
@@ -131,7 +130,8 @@ body {
 #about .versionNotes {
   background: white;
   border: 1px solid #ddd;
-  border-radius: 3px;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
   padding: 8px;
   margin: 5px 0 2px;
   font-size: 15px;
@@ -279,9 +279,11 @@ body.bilingual #about.enLocked.heLocked #editText {
   letter-spacing: 1px;
   text-align: center;
   vertical-align: center;
-  border-radius: 4px;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
   border: 1px solid #aaa;
-  box-shadow: 2px 2px 3px #333333;
+  -webkit-box-shadow: 2px 2px 3px #333333;
+          box-shadow: 2px 2px 3px #333333;
 }
 .button:hover {
   background: #ccc;
@@ -422,7 +424,8 @@ body .basetext.noCommentary {
     bottom: -10px;
     right: -4px;
     background: white;
-    box-shadow: 2px -2px 12px #888888;
+    -webkit-box-shadow: 2px -2px 12px #888;
+            box-shadow: 2px -2px 12px #888;
     z-index: 10;
   }
   body .commentaryBox.noCommentary {
@@ -453,7 +456,9 @@ body .basetext.noCommentary {
   width: 100%;
   font-size: 24px;
   padding: 18px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
   margin-bottom: 200px;
   letter-spacing: .7px;
   line-height: 1.3;
@@ -492,8 +497,6 @@ body.newText #newTextCompare {
   display: block;
   margin: 0 0 32px 0;
   -webkit-transition: none;
-  -moz-transition: none;
-  -o-transition: none;
   transition: none;
 }
 #newTextCompare .verseNum {
@@ -547,11 +550,10 @@ body.newText #newTextCompare {
 .verse {
   cursor: pointer;
   margin-right: 7px;
-  border-radius: 6px;
+  -webkit-border-radius: 6px;
+          border-radius: 6px;
   min-height: 24px;
   -webkit-transition: all 0.15s ease;
-  -moz-transition: all 0.15s ease;
-  -o-transition: all 0.15s ease;
   transition: all 0.15s ease;
 }
 .verse > .he,
@@ -692,7 +694,8 @@ body.newText #newTextCompare {
   position: absolute;
   /*left: -30px;*/
   left: 0px;
-  border-radius: 14px;
+  -webkit-border-radius: 14px;
+          border-radius: 14px;
   -moz-user-select: none;
   -khtml-user-select: none;
   -webkit-user-select: none;
@@ -741,7 +744,8 @@ body.newText #newTextCompare {
 .btn.verseControls {
   width: 37px;
   height: 37px;
-  border-radius: 19px;
+  -webkit-border-radius: 19px;
+          border-radius: 19px;
   margin: 2px 0px 0px 10px;
   padding: 0;
   position: absolute;
@@ -756,8 +760,10 @@ body.newText #newTextCompare {
   cursor: pointer;
 }
 .btn.verseControls:hover {
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
+  -webkit-border-bottom-left-radius: 0px;
+          border-bottom-left-radius: 0px;
+  -webkit-border-bottom-right-radius: 0px;
+          border-bottom-right-radius: 0px;
 }
 .verseControls:hover .verseControlsList {
   display: block;
@@ -770,7 +776,8 @@ body.newText #newTextCompare {
   font-weight: normal;
   background: white;
   border: 1px solid #ddd;
-  box-shadow: 2px 2px 2px #555;
+  -webkit-box-shadow: 2px 2px 2px #555;
+          box-shadow: 2px 2px 2px #555;
   padding: 7px 0px;
 }
 .verseControls span {
@@ -812,10 +819,12 @@ body.newText #newTextCompare {
   position: absolute;
   z-index: 100;
   background-color: #eff1f1;
-  border-radius: 10px;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
   border: 1px solid #666;
   padding: 0px;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
   background-clip: padding-box;
   overflow: hidden;
   min-width: 10%;
@@ -928,8 +937,10 @@ body.editMode .aboutBar {
   font-size: 15px;
   cursor: pointer;
   line-height: 23px;
-  box-shadow: 1px 1px 1px #555;
-  border-radius: 9px;
+  -webkit-box-shadow: 1px 1px 1px #555;
+          box-shadow: 1px 1px 1px #555;
+  -webkit-border-radius: 9px;
+          border-radius: 9px;
   margin-left: 2px;
 }
 .english .aboutBar .reviewsButton.he {
@@ -974,7 +985,9 @@ body.editMode .aboutBar {
   z-index: 12;
   overflow: hidden;
   padding-top: 40px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .commentaryBox > .tabs {
   position: absolute;
@@ -993,6 +1006,9 @@ body.editMode .aboutBar {
   font-family: arial;
   padding: 0 10px;
   cursor: pointer;
+}
+.commentaryBox.noCommentary > .tabs {
+  display: none;
 }
 .commentaryBox .loadingMessage {
   text-align: center;
@@ -1043,8 +1059,10 @@ body.editMode .aboutBar {
   top: 40%;
   border: 1px solid #aaa;
   border-left: none;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
+  -webkit-border-top-right-radius: 5px;
+          border-top-right-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+          border-bottom-right-radius: 5px;
   background: #ddd;
   height: 30px;
   width: 20px;
@@ -1154,7 +1172,8 @@ body.hebrew .enNote .anchorText {
 .sourcesBox.noCommentary .sourcesHeader {
   margin-bottom: 0px;
   border-bottom: none;
-  border-top-left-radius: 5px;
+  -webkit-border-top-left-radius: 5px;
+          border-top-left-radius: 5px;
 }
 .sourcesHeader #sourcesRange {
   font-style: italic;
@@ -1180,7 +1199,8 @@ body.hebrew .enNote .anchorText {
   right: -80%;
   min-width: 250px;
   border-left: 1px solid #AAA;
-  box-shadow: 1px 1px 4px #555;
+  -webkit-box-shadow: 1px 1px 4px #555;
+          box-shadow: 1px 1px 4px #555;
   background-color: white;
   overflow-y: auto;
 }
@@ -1270,16 +1290,13 @@ body.hebrew .enNote .anchorText {
   padding: 2px 0px;
   overflow: hidden;
   cursor: pointer;
-  border-radius: 3px;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
   -webkit-transition: all 0.15s ease;
-  -moz-transition: all 0.15s ease;
-  -o-transition: all 0.15s ease;
   transition: all 0.15s ease;
 }
 .commentary.notransition {
   -webkit-transition: none;
-  -moz-transition: none;
-  -o-transition: none;
   transition: none;
 }
 .commentaryBox .commentary.expanded {
@@ -1417,8 +1434,10 @@ body .screen .commentaryBox .noteMessage {
   background-color: #f5f5f5;
   border: 1px solid #eee;
   border: 1px solid rgba(0, 0, 0, 0.05);
-  border-radius: 4px;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 .noteMessage.lowlight {
   opacity: 1;
@@ -1439,7 +1458,8 @@ body .screen .commentaryBox .noteMessage {
   max-height: 488px;
   text-align: justify;
   line-height: 1.2;
-  box-shadow: 2px 2px 12px #333333;
+  -webkit-box-shadow: 2px 2px 12px #333333;
+          box-shadow: 2px 2px 12px #333333;
 }
 .open .commentator.refLink {
   font-size: 16px;
@@ -1523,7 +1543,8 @@ body.hebrew .open .openVerseTitle {
   display: inline-block;
   position: relative;
   border: 1px solid #aaa;
-  border-radius: 3px;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
   font-size: 18px;
   background: white;
   width: 655px;
@@ -1679,11 +1700,13 @@ body.hebrew #addSourceTextBox .en {
   right: 1.5%;
   font-size: 24px;
   padding: 20px;
-  border-radius: 10px;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
   z-index: 100;
   overflow: hidden;
   line-height: 1.2;
-  box-shadow: 2px 2px 12px #333333;
+  -webkit-box-shadow: 2px 2px 12px #333333;
+          box-shadow: 2px 2px 12px #333333;
 }
 #selectConfirm {
   display: none;
@@ -1743,7 +1766,8 @@ body.hebrew #addSourceTextBox .en {
   line-height: 1.3;
   font-size: 15px;
   padding: 7px;
-  border-radius: 3px;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
 }
 #addToSheetModal {
   width: 400px;
@@ -1762,7 +1786,8 @@ body.hebrew #addSourceTextBox .en {
 #sheets {
   list-style-type: none;
   background-color: white;
-  border-radius: 5px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
   padding: 8px 0;
   border: 1px solid #ccc;
   margin: 13px 20px;
@@ -1783,13 +1808,15 @@ body.hebrew #addSourceTextBox .en {
   position: absolute;
   width: 530px;
   padding: 15px 30px;
-  border-radius: 10px;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
   z-index: 100;
   overflow: hidden;
   text-align: justify;
   line-height: 1.2;
   font-size: 18px;
-  box-shadow: 2px 2px 12px #333333;
+  -webkit-box-shadow: 2px 2px 12px #333333;
+          box-shadow: 2px 2px 12px #333333;
 }
 #newTextModal .header {
   font-size: 26px;
@@ -1801,7 +1828,8 @@ body.hebrew #addSourceTextBox .en {
 #newTextModal input#newTextName {
   width: 350px;
   font-size: 20px;
-  border-radius: 5px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
   margin-bottom: 10px;
 }
 #newTextModal #section {
@@ -1811,7 +1839,8 @@ body.hebrew #addSourceTextBox .en {
 }
 #newTextModal #section input {
   font-size: 17px;
-  border-radius: 5px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
   width: 40px;
   text-align: center;
   margin-left: 8px;
@@ -1844,12 +1873,14 @@ body #addSourceTextBox .btn.inactive {
   left: 50%;
   margin-left: -330px;
   padding: 15px 50px;
-  border-radius: 10px;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
   z-index: 100;
   overflow: hidden;
   text-align: justify;
   line-height: 1.2;
-  box-shadow: 2px 2px 12px #333333;
+  -webkit-box-shadow: 2px 2px 12px #333333;
+          box-shadow: 2px 2px 12px #333333;
 }
 #closeAdd {
   position: absolute;
@@ -1886,7 +1917,8 @@ body #addSourceTextBox .btn.inactive {
   padding: 3px 12px;
   font-weight: normal;
   float: none;
-  border-radius: 5px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
   margin: 0px;
 }
 #addModal input {
@@ -1950,7 +1982,8 @@ body.newText #addVersionHeaderRight {
   padding: 6px 12px;
   background-color: #f2f2f2;
   border: 1px solid #ddd;
-  border-radius: 4px;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
 }
 #addVersionHeader.original #languageForm {
   display: none;
@@ -2065,7 +2098,8 @@ body.newText #addVersionHeaderRight input#versionSource {
   overflow: scroll;
   background: white;
   border: 1px solid #ddd;
-  border-radius: 3px;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
   margin: 10px 0px 12px;
 }
 .review {
@@ -2154,7 +2188,8 @@ body.newText #addVersionHeaderRight input#versionSource {
 #reviewHelp .reviewExamples {
   background: white;
   padding: 5px;
-  border-radius: 3px;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
   border: 1px solid #ddd;
   margin-bottom: 6px;
   text-align: left;
@@ -2292,25 +2327,22 @@ select {
   line-height: 18px;
   border: 1px solid #cccccc;
   -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
   border-radius: 3px;
 }
 input,
 textarea {
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
-  -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
-  -ms-transition: border linear 0.2s, box-shadow linear 0.2s;
-  -o-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -webkit-transition: border linear 0.2s, -webkit-box-shadow linear 0.2s;
+  transition: border linear 0.2s, -webkit-box-shadow linear 0.2s;
   transition: border linear 0.2s, box-shadow linear 0.2s;
+  transition: border linear 0.2s, box-shadow linear 0.2s, -webkit-box-shadow linear 0.2s;
 }
 input:focus,
 textarea:focus {
   border-color: rgba(82, 168, 236, 0.8);
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
   outline: 0;
   outline: thin dotted \9;
@@ -2321,7 +2353,6 @@ input[type="radio"]:focus,
 input[type="checkbox"]:focus,
 select:focus {
   -webkit-box-shadow: none;
-  -moz-box-shadow: none;
   box-shadow: none;
   outline: thin dotted #333;
   outline: 5px auto -webkit-focus-ring-color;
