@@ -3247,7 +3247,8 @@ function buildOpen(editMode) {
 
 	$o.prepend(openVerseHtml);
 	if ($o.hasClass("edit") && !editMode) {
-		title = "Add a <span class='sourceTypeWord'><span>Source</span></span> to " + title;
+		//title = "Add a <span class='sourceTypeWord'><span>Source</span></span> to " + title;
+		title = "Ask a <span class='sourceTypeWord'><span>Source</span></span> to " + title;
 		$("#addSourceCitation").focus();
 	}
 	var titleHtml = "<div class='openVerseTitle'>" + title + "</div>";
