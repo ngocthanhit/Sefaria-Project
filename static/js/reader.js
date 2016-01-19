@@ -860,12 +860,14 @@ $(function() {
 					'<span class="addSource"><i class="fa fa-link"></i> Add a Cross-Reference</span>' + 
 					'<span class="copyToClipboard"><i class="fa fa-clipboard"></i> Copy to Clipboard</span>' + 
 					'<span class="shareText"><i class="fa fa-share-alt"></i> Share Text</span>' +
-					'<span class="addToSheet"><i class="fa fa-file-text-o"></i> Add to Source Sheet</span>' +
-					'<span class="editVerse"><i class="fa fa-pencil"></i> Edit Text</span>' +
-					'<span class="translateVerse"><i class="fa fa-language"></i> Add Translation</span>' +
 					(sjs.sourcesFilter === "Layer" ? '<span class="addToDiscussion">Add to Discussion</span>' : "") +
 				'</div>' +
 				'</div>';
+
+			//'<span class="addToSheet"><i class="fa fa-file-text-o"></i> Add to Source Sheet</span>' +
+			//'<span class="editVerse"><i class="fa fa-pencil"></i> Edit Text</span>' +
+			//'<span class="translateVerse"><i class="fa fa-language"></i> Add Translation</span>' +
+
 			$("body").append(verseControls);
 			$(".verseControls").click(function(e){ return false; });
 			$(".verseControls span").click(function() { $(".verseControls").remove(); });
@@ -3155,8 +3157,8 @@ function buildOpen(editMode) {
 				'<option value="mesorat hashas">Mesorat HaShas</option>'+
 				'<option value="other">Other...</option>'+
 			'</select><input id="otherType" placeholder=""></div>' +
-		'<div class="formRow" id="anchorForm"><span class="label">Anchor Words:</span>' +
-			'<input placeholder="optional"></div>' +
+		//'<div class="formRow" id="anchorForm"><span class="label">Anchor Words:</span>' +
+		//	'<input placeholder="optional"></div>' +
 		'<div id="commentatorForm" class="formRow">'+
 			'<div class="label">Citation:</div>' +
 			'<input id="addSourceCitation" placeholder="e.g., Rashi, Brachot 32a:4-9, Bereshit Rabbah 3:4"></div>'+
@@ -3173,19 +3175,21 @@ function buildOpen(editMode) {
 				'</div>' +
 				'<div id="addSourceText">…</div></div></div>' +
 		'<div id="addNoteTitleForm" class="formRow">'+
-			'<div class="label" placeholder="optional">Note Title:</div>' +
+			'<div class="label" placeholder="optional">Question Title:</div>' +
 			'<input id="addNoteTitle" value="'+(title || "")+'"></div>'+
 		'<div class="formRow">' +
 			'<textarea id="addNoteTextarea">'+(text || "")+'</textarea></div>' +
 		'<div class="formRow" id="notePrivacyRow">' +
-			'<input type="radio" name="notePrivacy" checked="checked"><b>Private</b> - only you can see this note&nbsp;&nbsp;&nbsp;' +
-			'<input type="radio" name="notePrivacy" id="publicNote"><b>Public</b> - anyone can see this note</div>' +
+			'<input type="radio" name="notePrivacy" ><b>Anonymous</b> - submit question anonymously&nbsp;' +
+			'<input type="radio" name="notePrivacy" checked="checked" id="publicNote"><b>Public</b> - ask with your username</div>' +
 		'<div id="addSourceControls">' + 
 			'<span id="addSourceSave" class="btn btn-large inactive">Save Source</span>'+
-			"<span id='addNoteSave' class='btn btn-large'>Save Note</span>" +
+			"<span id='addNoteSave' class='btn btn-large'>Submit Question</span>" +
 			'<span id="addSourceCancel" class="btn btn-large">Cancel</span></div>' +
+		'<div class="formRow"><br/>By clicking "Submit" your question will be placed in a queue for answering by a Chosen People Answers staff member. Not all questions will be answered. Refer to Questions FAQ for good question-asking tips.</div>' +
+		'</div>' +
 		'</div>'
-		
+
 
 	$("body").append(html);
 	var $o = $(".open");
@@ -3248,9 +3252,12 @@ function buildOpen(editMode) {
 	$o.prepend(openVerseHtml);
 	if ($o.hasClass("edit") && !editMode) {
 		//title = "Add a <span class='sourceTypeWord'><span>Source</span></span> to " + title;
+
 		title = "Ask a <span class='sourceTypeWord'><span>Source</span></span> to " + title;
 		$("#addSourceCitation").focus();
 	}
+	//TODO: Thanh added
+	title = "Ask a Question About";
 	var titleHtml = "<div class='openVerseTitle'>" + title + "</div>";
 	if (editMode) titleHtml = "<div class='delete'>delete</div>" + titleHtml;
 	$o.prepend(titleHtml);
