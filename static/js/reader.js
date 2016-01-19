@@ -542,8 +542,8 @@ sjs.Init.handlers = function() {
 		return false;
 	};
 	$("#hebrew, #english, #bilingual").click(sjs.changeReaderContentLang);
-	
-	
+
+
 	// ------------ Bilingual Layout Options ----------------
 
 	$("#heLeft").click(function() {
@@ -897,6 +897,7 @@ $(function() {
 		sjs.setSourcesPanel(v[0], v[1]);
 		sjs.setSourcesCount();
 		sjs.updateUrlParams();
+
 		return false;
 	}
 	$(document).on("click", ".verse", sjs.handleVerseClick );
@@ -3178,11 +3179,13 @@ function buildOpen(editMode) {
 			'<div class="label" placeholder="optional">Question Title:</div>' +
 			'<input id="addNoteTitle" value="'+(title || "")+'"></div>'+
 		'<div class="formRow">' +
-			'<textarea id="addNoteTextarea">'+(text || "")+'</textarea></div>' +
+			'<textarea id="addNoteTextarea" onkeypress="UpdateCounter();" maxlength="500">'+(text || "")+'</textarea></div>' +
+		'<div class="formRow"><span id="qCounter">0</span> <span style="text-align: right;padding-left: 200px;">500 character limit</span>' +
+		'</div>' +
 		'<div class="formRow" id="notePrivacyRow">' +
 			'<input type="radio" name="notePrivacy" ><b>Anonymous</b> - submit question anonymously&nbsp;' +
 			'<input type="radio" name="notePrivacy" checked="checked" id="publicNote"><b>Public</b> - ask with your username</div>' +
-		'<div id="addSourceControls">' + 
+		'<div id="addSourceControls">' +
 			'<span id="addSourceSave" class="btn btn-large inactive">Save Source</span>'+
 			"<span id='addNoteSave' class='btn btn-large'>Submit Question</span>" +
 			'<span id="addSourceCancel" class="btn btn-large">Cancel</span></div>' +
@@ -4265,6 +4268,14 @@ function addNode(type, e) {
 	else {
 		alert('Please select at least sentence');
 	}
+}
+
+function UpdateCounter()
+{
+	var curLength = $('#addNoteTextarea').val().length;
+	if(curLength>499)
+		curLength = 499;
+	$('#qCounter').text(curLength + 1);
 }
 
 $(document).on('click', '[data-action]', function(e) {
