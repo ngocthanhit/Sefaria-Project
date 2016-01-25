@@ -3176,20 +3176,20 @@ function buildOpen(editMode) {
 				'</div>' +
 				'<div id="addSourceText">…</div></div></div>' +
 		'<div id="addNoteTitleForm" class="formRow">'+
-			'<div class="label" placeholder="optional">Question Title:</div>' +
+			'<div class="label" placeholder="optional" style="font-size:18px;"><strong>Question Title:</strong></div>' +
 			'<input id="addNoteTitle" value="'+(title || "")+'"></div>'+
 		'<div class="formRow">' +
 			'<textarea id="addNoteTextarea" onkeypress="UpdateCounter();" maxlength="500">'+(text || "")+'</textarea></div>' +
-		'<div class="formRow"><span id="qCounter">0</span> <span style="text-align: right;padding-left: 200px;">500 character limit</span>' +
+		'<div class="formRow" style="text-align:right !important;"><span id="qCounter">0</span> <span style="text-align: right;padding-left: 200px;">500 character limit</span>' +
 		'</div>' +
-		'<div class="formRow" id="notePrivacyRow">' +
-			'<input type="radio" name="notePrivacy" ><b>Anonymous</b> - submit question anonymously&nbsp;' +
-			'<input type="radio" name="notePrivacy" checked="checked" id="publicNote"><b>Public</b> - ask with your username</div>' +
+		'<div class="formRow" id="notePrivacyRow" >' +
+			'<input type="radio" name="notePrivacy" ><span style="font-size:18px;"> <b>Anonymous</b> - submit question anonymously&nbsp;</span><br/>' +
+			'<input type="radio" name="notePrivacy" checked="checked" id="publicNote"><span style="font-size:18px;"><b>Public</b> - ask with your username</span> </div>' +
 		'<div id="addSourceControls">' +
 			'<span id="addSourceSave" class="btn btn-large inactive">Save Source</span>'+
 			"<span id='addNoteSave' class='btn btn-large'>Submit Question</span>" +
 			'<span id="addSourceCancel" class="btn btn-large">Cancel</span></div>' +
-		'<div class="formRow"><br/>By clicking "Submit" your question will be placed in a queue for answering by a Chosen People Answers staff member. Not all questions will be answered. Refer to Questions FAQ for good question-asking tips.</div>' +
+		'<div class="formRow" style="font-size:16px;"><br/>By clicking "Submit" your question will be placed in a queue for answering by a Chosen People Answers staff member. Not all questions will be answered. Refer to Questions FAQ for good question-asking tips.</div>' +
 		'</div>' +
 		'</div>'
 
@@ -3256,11 +3256,11 @@ function buildOpen(editMode) {
 	if ($o.hasClass("edit") && !editMode) {
 		//title = "Add a <span class='sourceTypeWord'><span>Source</span></span> to " + title;
 
-		title = "Ask a <span class='sourceTypeWord'><span>Source</span></span> to " + title;
+		//title = "Ask a <span class='sourceTypeWord'><span>Source</span></span> to " + title;
 		$("#addSourceCitation").focus();
 	}
 	//TODO: Thanh added
-	title = "Ask a Question About";
+	title = "Ask a Question About " + title ;
 	var titleHtml = "<div class='openVerseTitle'>" + title + "</div>";
 	if (editMode) titleHtml = "<div class='delete'>delete</div>" + titleHtml;
 	$o.prepend(titleHtml);
