@@ -115,7 +115,7 @@ urlpatterns += patterns('reader.views',
 
 # Questions queue
 urlpatterns += patterns('reader.views',
-    (r'^questions/?$', 'questions'),
+    (r'^questionqueue/?$', 'questionqueue'),
     (r'^api/discussions/new$', 'new_discussion_api'),
 )
 

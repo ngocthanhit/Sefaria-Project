@@ -2387,7 +2387,7 @@ def visual_garden_page(request, g):
     return render_to_response('visual_garden.html', template_vars, RequestContext(request))
 
 @ensure_csrf_cookie
-def questions(request):
+def questionqueue(request):
     """
     Questions page.
     """
@@ -2397,3 +2397,4 @@ def questions(request):
                                    "discussions": discussions,
                                 },
                                 RequestContext(request))
+
