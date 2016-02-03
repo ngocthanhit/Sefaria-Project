@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+
+{% load sefaria_tags %}
+{% load humanize %}
+
+{% block title %}Questions Queue{% endblock %}
+
+{% block content %}
+<center>
+<h1>Questions Queue</h1>
+</center>
+<br>
+<table class="sheetTable collapsed">
+    <thead>
+    <tr>
+        <td class="title">Username</td>
+        <td class="author">Question Title</td>
+        <td class="views">Question </td>
+        <td class="size">Privacy </td>
+        <td class="modified">Date submitted</td>
+        <td class="modified">Priority </td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="sheetRow">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    </tbody>
+</table>
+
+
+{% include "elements/login_prompt.html" with msg="Please login to Start a Discussion." %}
+
+{% endblock %}
+
+{% block js %}
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.js"></script>-->
+<script>{% include "js/django-csrf.js" %}</script>
+<script>
+
+    $(function() {
+        sjs.makeLayer = function(ref) {
+            console.log(ref);
+            if (!sjs.loggedIn) {
+                return sjs.loginPrompt();
+            }
+            if (sjs._layerUrlkey) {
+                sjs.showLayerInfo(ref);
+                return;
+            }
+            $.post("/api/discussions/new", {}, function(data) {
+                if ("error" in data) {
+                    sjs.alert.message(data.error);
+                } else {
+                    sjs._layerUrlkey = data.urlkey;
+                    sjs.showLayerInfo(ref);
+                }
+            });
+        };
+        sjs.showLayerInfo = function(ref) {
+            var link = "/" + normRef(ref) + "?layer=" + sjs._layerUrlkey;
+            $("#discussLink").val("http://www.sefaria.org" + link);
+            $("#goLink").attr("href", link).show();
+        };
+        $("#browse").click(function() {
+            sjs.textBrowser.show({
+                callback: sjs.makeLayer,
+                position: "static",
+                target: "#chooseText"
+            });
+        })
+
+        sjs.textBrowser.show({
+            callback: sjs.makeLayer,
+            position: "static",
+            target: "#chooseText"
+        });
+
+    })
+
+</script>
+<!--
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f0b68586603bc9f"></script>
+-->
+{% endblock %}

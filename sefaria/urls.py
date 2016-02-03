@@ -8,6 +8,7 @@ from emailusernames.forms import EmailAuthenticationForm
 from sefaria.forms import HTMLPasswordResetForm
 from sefaria.settings import DOWN_FOR_MAINTENANCE
 
+
 admin.autodiscover()
 
 # Texts API
@@ -111,6 +112,13 @@ urlpatterns += patterns('reader.views',
     (r'^discussions/?$', 'discussions'),
     (r'^api/discussions/new$', 'new_discussion_api'),
 )
+
+# Questions queue
+urlpatterns += patterns('reader.views',
+    (r'^questions/?$', 'questions'),
+    (r'^api/discussions/new$', 'new_discussion_api'),
+)
+
 
 # Dashboard Page
 urlpatterns += patterns('reader.views',

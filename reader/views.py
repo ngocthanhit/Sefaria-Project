@@ -2385,3 +2385,15 @@ def visual_garden_page(request, g):
     }
 
     return render_to_response('visual_garden.html', template_vars, RequestContext(request))
+
+@ensure_csrf_cookie
+def questions(request):
+    """
+    Questions page.
+    """
+    discussions = LayerSet({"owner": request.user.id})
+    return render_to_response('questions.html',
+                                {
+                                   "discussions": discussions,
+                                },
+                                RequestContext(request))
