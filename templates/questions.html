@@ -42,7 +42,8 @@
         var title = metrics[i]["title"];
         var text = metrics[i]["text"];
         var public = metrics[i]["public"];
-        strRow = "<tr class='sheetRow'> <td></td> <td>" + title + "</td><td>" + text + "</td><td>" + public + "</td> <td></td><td></td></tr>";
+        var owner = metrics[i]["owner"];
+        strRow = "<tr class='sheetRow'> <td>" + owner + "</td> <td>" + title + "</td><td>" + text + "</td><td>" + public + "</td> <td></td><td></td></tr>";
         $('.sheetTable').find('tbody').append(strRow);
     }
     console.log(metrics);
