@@ -2392,9 +2392,11 @@ def questionqueue(request):
     Questions page.
     """
     discussions = LayerSet({"owner": request.user.id})
+    notes = db.notes.find()
+    notes_json = dumps(notes)
     return render_to_response('questions.html',
                                 {
-                                   "discussions": discussions,
+                                   "notes_json": notes_json,
                                 },
                                 RequestContext(request))
 
