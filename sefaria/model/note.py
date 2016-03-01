@@ -2,6 +2,7 @@
 note.py
 Writes to MongoDB Collection: notes
 """
+from datetime import datetime
 
 import regex as re
 import bleach
@@ -38,6 +39,7 @@ class Note(abst.AbstractMongoRecord):
     def _normalize(self):
         self.ref = Ref(self.ref).normal()
         self.text = bleach.clean(self.text, tags=self.allowed_tags, attributes=self.allowed_attrs)
+        self.note_date = datetime.now()
 
 
 class NoteSet(abst.AbstractMongoSet):
@@ -52,6 +54,7 @@ def process_index_title_change_in_notes(indx, **kwargs):
         pattern = Ref(indx.title).base_text_and_commentary_regex()
         pattern = pattern.replace(re.escape(indx.title), re.escape(kwargs["old"]))
     notes = NoteSet({"ref": {"$regex": pattern}})
+
     for n in notes:
         try:
             n.ref = n.ref.replace(kwargs["old"], kwargs["new"], 1)

@@ -10,15 +10,15 @@
 <h1>Question Queue</h1>
 </center>
 <br>
-<table class="sheetTable collapsed">
+<table class="table table-bordered table-striped sortable sheetTable">
     <thead>
     <tr>
-        <td class="title">Username</td>
-        <td class="author">Question Title</td>
-        <td class="views">Question </td>
-        <td class="size">Privacy </td>
-        <td class="modified">Date submitted</td>
-        <td class="modified">Priority </td>
+        <th class="title">Username</th>
+        <th class="author"  data-sortcolumn="1" data-sortkey="1-1">Question Title</th>
+        <th class="views"  data-sortcolumn="1" data-sortkey="1-1">Question </th>
+        <th class="size"  data-sortcolumn="1" data-sortkey="1-1">Privacy </th>
+        <th class="modified"  data-sortcolumn="1" data-sortkey="1-1">Date submitted</th>
+        <th class="modified">Priority </th>
     </tr>
     </thead>
     <tbody>
@@ -43,10 +43,20 @@
         var text = metrics[i]["text"];
         var public = metrics[i]["public"];
         var owner = metrics[i]["owner"];
+        if(owner == "1")
+        {
+            owner = "Admin";
+        }
         strRow = "<tr class='sheetRow'> <td>" + owner + "</td> <td>" + title + "</td><td>" + text + "</td><td>" + public + "</td> <td></td><td></td></tr>";
         $('.sheetTable').find('tbody').append(strRow);
     }
-    console.log(metrics);
+
+
+
+    (function () {
+        var $table = $('table');
+        $table.on('sorted', function () { console.log("Table was sorted."); });
+    }());
 
 </script>
 
