@@ -27,7 +27,27 @@
 </table>
 
 
-
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Edit Note</h4>
+            </div>
+            <div class="modal-body">
+                <p><input type="text" class="input-sm" id="txtfname"/></p>
+                <p><input type="text" class="input-sm" id="txtlname"/></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<script type="text/javascript" src="//code.jquery.com/jquery-2.1.0.js"></script>
+<script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
 {% include "elements/login_prompt.html" with msg="Please login to Start a Discussion." %}
 
@@ -52,11 +72,12 @@
     }
 
 
-
-    (function () {
-        var $table = $('table');
-        $table.on('sorted', function () { console.log("Table was sorted."); });
-    }());
+    $('.sheetTable tbody tr  td').on('click',function(){
+        alert("Click to view detail....");
+        $("#myModal").modal("show");
+        $("#txtfname").val("aaa");
+        //$("#txtlname").val($(this).closest('tr').children()[1].textContent);
+    });
 
 </script>
 
